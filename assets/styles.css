@@ -1,3 +1,15 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+
 .brand-logo {
     font-family: 'Edu NSW ACT Foundation', cursive;
 }
@@ -6,6 +18,28 @@
     font-family: 'Edu NSW ACT Foundation', cursive;
     font-size: 20px;
     color: teal;
+}
+#input{
+    width: 100px;
+}
+
+.nav-books{
+    display: flex;
+    justify-content: center;
+    border: 2px solid red;
+    align-items: center;
+}
+
+h2 {
+    color: red;
+    font-size: 20px;
+}
+
+#output{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    flex-shrink: 1;
 }
 
 #subscribe {
