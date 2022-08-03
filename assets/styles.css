@@ -4,14 +4,29 @@
     margin: 0;
 }
 
+main{
+background-color: aliceblue;
+}
+
 header{
     position: fixed;
     width: 100%;
     top: 0;
 }
 
+/* .tabs{
+    
+} */
+
+#logo-wrapper{
+    position: absolute;
+}
 .brand-logo {
     font-family: 'Edu NSW ACT Foundation', cursive;
+}
+
+#nav-mobile{
+
 }
 
 .nav-tabs {
@@ -31,7 +46,7 @@ header{
 }
 
 h2 {
-    color: red;
+    color: teal;
     font-size: 20px;
 }
 
