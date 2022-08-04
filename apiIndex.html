@@ -18,34 +18,52 @@
 <body>
     <!--section for logo, navbar, and search-->
     <header>
-        <nav>
+        <div class="navbar-fixed">
+            <nav>
 
-            <!--logo section-->
-            <div class="nav-wrapper orange lighten-4">
-                <div id="logo-wrapper">
-                    <a class="brand-logo ms-4">Bookly</a>
-                </div>
-                <!--nav-bar links-->
-            <!-- <div class="tabs"> -->
-                <ul id="nav-mobile" class="right hide-on-med-and-down">
-                    <li><a href="#about" class="nav-tabs hoverable mx-4">About</a></li>
-                    <li><a href="#contact" class="nav-tabs hoverable mx-4">Contact</a></li>
-                    <li><a href="#subscribe" class="nav-tabs hoverable mx-4">Subscribe</a></li>
-                </ul>
-              <!-- </div>   -->
-                <div class="get-books">
-                    <section class="nav-books ">
-                        <input class="" id="input">
-                        <button class="" onclick="getBooks()">Get Books</button>
-                    </section>
-                </div>
-                <div class="get-text">
-                    <section class="nav-text">
-                        <input id="input">
-                        <button onclick="getText()">Get Books</button>
-                    </section>
-                </div>
-                <!-- <form>
+                <!--logo section-->
+                <div class="nav-wrapper orange lighten-4">
+                    <div id="logo-wrapper">
+                        <a class="brand-logo ms-4 orange-text">Bookly</a>
+                    </div>
+                    <!--nav-bar links-->
+                    <!-- <div class="tabs"> -->
+                    <ul id="nav-mobile" class="right hide-on-med-and-down">
+                        <li>
+                            <div class="get-books">
+                                <section class="nav-books pe-4">
+                                    <input class="" id="input">
+                                    <button id="book-btn" class="teal lighten-2" onclick="getBooks()">Get Book by name</button>
+                                </section>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="get-text">
+                                <section class="nav-text pe-4">
+                                    <input id="input">
+                                    <button id="text-btn" class="teal lighten-2" onclick="getText()">Get Book by text</button>
+                                </section>
+                            </div>
+                        </li>
+
+                        <li><a href="#about" class="nav-tabs hoverable mx-4">About</a></li>
+                        <li><a href="#contact" class="nav-tabs hoverable mx-4">Contact</a></li>
+                        <li><a href="#subscribe" class="nav-tabs hoverable mx-4">Subscribe</a></li>
+                    </ul>
+                    <!-- </div>   -->
+                    <!-- <div class="get-books">
+                        <section class="nav-books ">
+                            <input class="" id="input">
+                            <button class="" onclick="getBooks()">Get Books</button>
+                        </section>
+                    </div>
+                    <div class="get-text">
+                        <section class="nav-text">
+                            <input id="input">
+                            <button onclick="getText()">Get Books</button>
+                        </section>
+                    </div> -->
+                    <!-- <form>
                     <div class="input-field right">
                         <input id="input" type="search" required>
                         <button onclick="getBooks()">Get Books</button>
@@ -54,9 +72,10 @@
                         <i class="material-icons"></i>
                     </div>
                 </form> -->
-            </div>
+                </div>
 
-        </nav>
+            </nav>
+        </div>
     </header>
     <div id="output"></div>
     <!--quote section-->
