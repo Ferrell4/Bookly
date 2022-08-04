@@ -9,7 +9,7 @@ function getBooks(){
     fetch("https://books.googleapis.com/books/v1/volumes?q="+document.getElementById("input").value+"&key=AIzaSyB0jD4ojzXkBjv5QQueyFNrhDdBgI0Azqc")
     .then(a=> a.json())//converts the response which is currently a string into an object we can then read 
     .then(response =>{
-        for(var i = 0; i < 4;i++){
+        for(var i = 0; i < 8;i++){
             document.getElementById("output").innerHTML +="<h2>" + response.items[i].volumeInfo.title + "</h2>"+response.items[i].volumeInfo.authors+" <br> <img src='http://books.google.com/books/content?id=" +response.items[i].id+ "&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api'><br>";
         }
     } );
