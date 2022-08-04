@@ -1,11 +1,64 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+main{
+background-color: aliceblue;
+display: grid;
+}
+
+header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+
+/* .tabs{
+    
+} */
+
+#logo-wrapper{
+    position: absolute;
+}
 .brand-logo {
     font-family: 'Edu NSW ACT Foundation', cursive;
 }
+
+/* #nav-mobile{
+
+} */
 
 .nav-tabs {
     font-family: 'Edu NSW ACT Foundation', cursive;
     font-size: 20px;
     color: teal;
+}
+#input{
+    width: 100px;
+}
+
+.nav-books{
+    display: flex;
+    justify-content: center;
+    /* border: 2px solid red; */
+    align-items: center;
+}
+
+h2 {
+    color: teal;
+    font-size: 20px;
+}
+
+#output{
+    background-color: aliceblue;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    
 }
 
 #subscribe {
@@ -17,11 +70,9 @@
     height: 200px;
     margin-top: 100px;
     font-family:'Edu NSW ACT Foundation', cursive;
+    margin-bottom: 15%;
      }
 
-.subscribe-info {
-    margin-bottom: 20%;
-}
 
   .statement {
       font-size: 20px;

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /*function getBooks(){
     document.getElementById('output').innerHTML= "";
     fetch("http://openlibrary.org/search.json?q=" + document.getElementById("input").value)
@@ -11,6 +12,8 @@
 */
 
 //response.items.[i].imageLinks.thumbnail  
+=======
+>>>>>>> 23b6acf827bdb7d9f14e69fa84acc5f0eb3b1684
 var openLibraryApi = "http://openlibrary.org/search.json?q="
 var googleBooksApi = "https://books.googleapis.com/books/v1/volumes?q="
 var googleSearchApi = "https://books.googleapis.com/books/v1/volumes?q="+document.getElementById("input").value+"&key=AIzaSyB0jD4ojzXkBjv5QQueyFNrhDdBgI0Azqc"
@@ -22,9 +25,17 @@ function getBooks(){
     fetch("https://books.googleapis.com/books/v1/volumes?q="+document.getElementById("input").value+"&key=AIzaSyB0jD4ojzXkBjv5QQueyFNrhDdBgI0Azqc")
     .then(a=> a.json())//converts the response which is currently a string into an object we can then read 
     .then(response =>{
+<<<<<<< HEAD
         for(var i = 0; i < response.items.length;i++){
+=======
+        for(var i = 0; i < 8;i++){
+>>>>>>> 23b6acf827bdb7d9f14e69fa84acc5f0eb3b1684
             document.getElementById("output").innerHTML +="<h2>" + response.items[i].volumeInfo.title + "</h2>"+response.items[i].volumeInfo.authors+" <br> <img src='http://books.google.com/books/content?id=" +response.items[i].id+ "&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api'><br>";
         }
     } );
 }
 
+<<<<<<< HEAD
+=======
+f
+>>>>>>> 23b6acf827bdb7d9f14e69fa84acc5f0eb3b1684
