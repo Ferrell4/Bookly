@@ -4,12 +4,12 @@
     margin: 0;
 }
 
-main{
-background-color: aliceblue;
-display: grid;
+main {
+    background-color: aliceblue;
+    display: grid;
 }
 
-header{
+header {
     position: fixed;
     width: 100%;
     top: 0;
@@ -19,9 +19,10 @@ header{
     
 } */
 
-#logo-wrapper{
+#logo-wrapper {
     position: absolute;
 }
+
 .brand-logo {
     font-family: 'Edu NSW ACT Foundation', cursive;
 }
@@ -35,11 +36,12 @@ header{
     font-size: 20px;
     color: teal;
 }
-#input{
+
+#input {
     width: 100px;
 }
 
-.nav-books{
+.nav-books {
     display: flex;
     justify-content: center;
     /* border: 2px solid red; */
@@ -51,7 +53,7 @@ h2 {
     font-size: 20px;
 }
 
-#output{
+#output {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -66,37 +68,45 @@ h2 {
     text-align: center;
     height: 200px;
     margin-top: 100px;
-    font-family:'Edu NSW ACT Foundation', cursive;
+    font-family: 'Edu NSW ACT Foundation', cursive;
     margin-bottom: 15%;
-     }
+}
 
 
-  .statement {
-      font-size: 20px;
-      font-family: 'Courier New', Courier, monospace;
-      padding-left: 15%;
-      padding-right: 15%;
-      margin-top: 5%;
-    
-  }
+.statement {
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    padding-left: 15%;
+    padding-right: 15%;
+    margin-top: 5%;
 
-  .quote {
-    font-family:'Edu NSW ACT Foundation', cursive; 
+}
+
+.quote {
+    font-family: 'Edu NSW ACT Foundation', cursive;
     margin-top: 20%;
     margin-bottom: 20%;
-  }
+}
 
-  .contact-list {
-      margin: 10%;
-  }
+.contact-list {
+    margin: 10%;
+}
 
-  .quote-text {
-      font-size: 35px;
-  }
+.quote-text {
+    font-size: 35px;
+}
 
-  .contact-text{
+.contact-text {
     font-family: 'Courier New', Courier, monospace;
     margin-bottom: 5%;
     margin-top: 5%;
-  }
-  
+}
+
+.grid-container {
+    display: grid;
+
+}
+
+.grid-item {
+    padding: 20px;
+}
