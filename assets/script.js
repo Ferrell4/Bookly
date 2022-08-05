@@ -26,8 +26,22 @@ function getBooks(){
         // for(var i = 0; i < response.items.length;i++){
         //     document.getElementById("output").innerHTML +="<h2>" + response.items[i].volumeInfo.title + "</h2>"+response.items[i].volumeInfo.authors+" <br> <img src='http://books.google.com/books/content?id=" +response.items[i].id+ "&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api'><br>";
         // }
-        for(var i = 0; i < 4;i++){
+        for(var i = 0; i < 15;i++){
             document.getElementById("output").innerHTML +="<h2>" + response.items[i].volumeInfo.title + "</h2>"+response.items[i].volumeInfo.authors+" <br> <img src='http://books.google.com/books/content?id=" +response.items[i].id+ "&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api'><br>" + response.items[i].volumeInfo.description;
+        }
+    } );
+}
+
+function getAuthor(){
+    document.getElementById('output2').innerHTML= "";
+    fetch("https://books.googleapis.com/books/v1/volumes?q="+document.getElementById("input2").value+"&key=AIzaSyB0jD4ojzXkBjv5QQueyFNrhDdBgI0Azqc")
+    .then(a=> a.json())//converts the response which is currently a string into an object we can then read
+    .then(response =>{
+        // for(var i = 0; i < response.items.length;i++){
+        //     document.getElementById("output").innerHTML +="<h2>" + response.items[i].volumeInfo.title + "</h2>"+response.items[i].volumeInfo.authors+" <br> <img src='http://books.google.com/books/content?id=" +response.items[i].id+ "&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api'><br>";
+        // }
+        for(var i = 0; i < 15;i++){
+            document.getElementById("output2").innerHTML +="<h2>" + response.items[i].volumeInfo.authors + "</h2><br> <img src='http://books.google.com/books/content?id=" +response.items[i].id+ "&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api'><br>" + response.items[i].volumeInfo.description;
         }
     } );
 }
