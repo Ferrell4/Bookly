@@ -32,7 +32,7 @@
                             <div class="get-books">
                                 <section class="nav-books pe-4">
                                     <input class="" id="input">
-                                    <button id="book-btn" class="teal lighten-2" onclick="getBooks()">Get Book by
+                                    <button id="book-btn" class="btn-btn teal lighten-2" onclick="getBooks()">Get Book by
                                         name</button>
                                 </section>
                             </div>
@@ -41,14 +41,15 @@
                             <div class="get-author">
                                 <section class="nav-text pe-4">
                                     <input id="input2">
-                                    <button id="text-btn" class="teal lighten-2" onclick="getAuthor()">Get Author</button>
+                                    <button id="text-btn" class="btn-btn teal lighten-2" onclick="getAuthor()">Get Author</button>
                                 </section>
                             </div>
                         </li>
 
                         <li><a href="#about" class="nav-tabs hoverable mx-4">About</a></li>
-                        <li><a href="#contact" class="nav-tabs hoverable mx-4">Contact</a></li>
                         <li><a href="#subscribe" class="nav-tabs hoverable mx-4">Subscribe</a></li>
+                        <li><a href="#contact" class="nav-tabs hoverable mx-4">Contact</a></li>
+                        
                     </ul>
                     <!-- </div>   -->
                     <!-- <div class="get-books">
@@ -83,7 +84,7 @@
     </div>
     <!--quote section-->
     <main>
-        <section class="center">
+        <section class="quote-sect center">
             <div class="quote">
                 <h2 class=" quote-text center mx-4">
                     “There is no friend as loyal as a book.” -Ernest Hemingway
@@ -91,7 +92,7 @@
             </div>
             <!--about section-->
         </section>
-        <section id="about">
+        <section id="about" class="m-4">
             <div class="about-bookly p-4 center">
                 <h2 class="p-3">How Bookly came to be</h2>
                 <p class="statement">Our mission is to make your reading experience as enjoyable as can be. One place to
@@ -102,11 +103,11 @@
         <!--subscribe section-->
         <div class="container-fluid">
 
-            <section id="subscribe" class="subscribe-info subcribe-text p-4">
+            <section id="subscribe" class="subscribe-info subcribe-text ">
                 <h2> Subscribe to Bookly!</h2>
-                <form id="form" action="" class="p-1">
-                    <input name="email" id="email" type="email" placeholder="Subscribe to our email list" required />
-                    <input id="submit" type="submit" value="Subscribe" class="btn" />
+                <form id="form" action="" class="">
+                    <input onclick="store()" name="email" id="email" type="email" placeholder="Subscribe to our email list" required />
+                    <input  id="submit" type="submit" value="Subscribe" class="btn" />
                 </form>
             </section>
         </div>
