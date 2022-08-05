@@ -1,60 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/164afc97fd.js" crossorigin="anonymous"></script>
+    <link href="./assets/styles.css" rel="stylesheet">
     <title>Bookly</title>
 </head>
+
 <body>
-    <input id="input">
-    <button onclick="getBooks()">Get Books</button>
+    <header>
+        <nav>
+
+            <!--logo section-->
+            <div class="nav-wrapper orange lighten-4">
+                <a class="brand-logo ms-4">Bookly</a>
+                <!--nav-bar links-->
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a href="#about" class="nav-tabs hoverable mx-4">About</a></li>
+                    <li><a href="#featured" class="nav-tabs hoverable mx-4">Featured</a></li>
+                    <li><a href="#contact" class="nav-tabs hoverable mx-4">Contact</a></li>
+                </ul>
+
+                <section class = "nav-books">
+                    <input id="input">
+                    <button onclick="getBooks()">Get Books</button>
+                </section>
+                
+                <section class = "nav-text">
+                    <input id="input">
+                    <button onclick="getText()">Get Books</button>
+                </section>
+
+                <!-- <form>
+                    <div class="input-field right">
+                        <input id="input" type="search" required>
+                        <button onclick="getBooks()">Get Books</button>
+                        <label class="label-icon" for="search"><i class="fa-solid fa-magnifying-glass">
+                                </i></label>
+                        <i class="material-icons"></i>
+                    </div>
+                </form> -->
+            </div>
+            
+        </nav>
+    </header>
     <div id="output"></div>
- 
+    <section id="about">
+        <div class="about-bookly p-4 center">
+            <h2 class="p-3">How Bookly came to be</h2>
+            <p class="statement">Our mission is to make your reading experience as enjoyable as can be. One place to
+                search for your favorite book and a direct link to buy that book.</p>
+        </div>
+    </section>
+
+    <section class="center">
+        <div class="quote">
+            <h2 class=" quote-text center mx-4">
+                “There is no friend as loyal as a book.” -Ernest Hemingway
+            </h2>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-list center">
+        <h2 class="p-2">Let us know</h2>
+        <p class="contact-text">If you enjoyed Bookly let us know and contact us with any questions!</p>
+        <div class="contact-links p-2">
+            <a href="https://www.facebook.com/" target="_blank" class="btn contact-details"><i
+                    class="fab fa-facebook-square"></i> Facebook</a>
+            <a id="profile-link" href="https://www.instagram.com/" target="_blank" class="btn contact-details"><i
+                    class="fa-brands fa-instagram"></i>Instagram</a>
+            <a href="https://twitter.com/i/flow/login" target="_blank" class="btn contact-details"><i
+                    class="fab fa-twitter"></i> Twitter</a>
+            <a href="mailto:example@example.com" class="btn contact-details"><i class="fas fa-at"></i> Send a
+                mail</a>
+        </div>
+    </section>
+
+    <footer class=" center brown lighten-4 p-2">
+        <div class="footer-copyright">
+            <div class="container">
+                © 2022 Copyright Bookly
+            </div>
+        </div>
+    </footer>
     
-<script>
-/*function getBooks(){
-    document.getElementById('output').innerHTML= "";
-    fetch("http://openlibrary.org/search.json?q=" + document.getElementById("input").value)
-    .then(a=> a.json())//converts the response which is currently a string into an object we can then read 
-    .then(response =>{
-        for(var i = 0; i<10;i++){
-            document.getElementById("output").innerHTML +="<h2>" + response.docs[i].title + "</h2>"+response.docs[i].author_name[0]+" <br> <img src='http://covers.openlibrary.org/b/isbn/" + response.docs[i].isbn[0]+"-M.jpg'><br>";
-        }
-    } );
-}
-*/
 
-//response.items.[i].imageLinks.thumbnail  
-var openLibraryApi = "http://openlibrary.org/search.json?q="
-var googleBooksApi = "https://books.googleapis.com/books/v1/volumes?q="
-var googleSearchApi = "https://books.googleapis.com/books/v1/volumes?q="+document.getElementById("input").value+"&key=AIzaSyB0jD4ojzXkBjv5QQueyFNrhDdBgI0Azqc"
-var testApi = "https://books.googleapis.com/books/v1/volumes?q=love&key=AIzaSyB0jD4ojzXkBjv5QQueyFNrhDdBgI0Azqc"
-console.log(testApi)
+    <input id="input"> 
+    <button onclick="getBooks()">Get Books</button>
+    <div id="output"></div> 
+    <input id="inputTwo"> 
+    <button onclick="getBooksTwo()">Similar Books</button>
+    <div id="outputTwo"></div> 
 
-function getBooks(){
-    document.getElementById('output').innerHTML= "";
-    fetch("https://books.googleapis.com/books/v1/volumes?q="+document.getElementById("input").value+"&key=AIzaSyB0jD4ojzXkBjv5QQueyFNrhDdBgI0Azqc")
-    .then(a=> a.json())//converts the response which is currently a string into an object we can then read 
-    .then(response =>{
-        for(var i = 0; i < response.items.length;i++){
-            document.getElementById("output").innerHTML +="<h2>" + response.items[i].volumeInfo.title + "</h2>"+response.items[i].volumeInfo.authors+" <br> <img src='http://books.google.com/books/content?id=" +response.items[i].id+ "&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api'><br>";
-        }
-    } );
-}
-
-
-
-</script>  
-
-
-
-
+    <script src="./assets/script.js"></script>
 </body>
+
 </html>
-
-
-
-
-
-
