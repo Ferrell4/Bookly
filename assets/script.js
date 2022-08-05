@@ -56,7 +56,7 @@ function getBooks() {
             // }
             for (var i = 0; i < 4; i++) {
                 console.log(response.items[i].saleInfo)
-                document.getElementById("output").innerHTML += 
+                document.getElementById("output").innerHTML += "<h2>" + response.items[i].volumeInfo.title + "</h2>" +
                     response.items[i].volumeInfo.authors + " <br> " +
                     '<a href="'+response.items[i].saleInfo.buyLink +'" target=blank>'+
                     " <img src='http://books.google.com/books/content?id=" + response.items[i].id + "&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api' >"+ "</a>"+" <br>" + response.items[i].volumeInfo.description;
