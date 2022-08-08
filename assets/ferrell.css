@@ -415,17 +415,8 @@ main .container h3 {
     padding-right: 64px;
   }
 
-  .services .container .services-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .projects .projects-grid .project .content p {
-    font-size: 16px;
-  }
   .contact-grid {
     grid-template-columns: repeat(1, 1fr);
-  }
-  .projects .projects-grid {
-    grid-template-columns: repeat(2, 1fr);
   }
 }
 
