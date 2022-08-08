@@ -43,6 +43,10 @@ section h2 {
   border-radius: 8px;
   box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.5);
 }
+
+#year-btn,
+#year-btn2,
+#book-btn2,
 #book-btn,
 .button {
   /* this will remove browser css */
@@ -108,7 +112,7 @@ header .container span {
 nav.navBar {
   display: grid;
   grid-gap: 16px;
-  grid-template-columns: repeat(4, auto);
+  grid-template-columns: repeat(5, auto);
   align-items: center;
 }
 

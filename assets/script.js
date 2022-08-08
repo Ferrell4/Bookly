@@ -81,6 +81,18 @@ function getBooks2() {
         });
 }
 
+function getYear() {
+    document.getElementById('outputYear').innerHTML = "";
+    fetch("https://api.nytimes.com/svc/books/v3/lists/full-overview.json?published_date=" + document.getElementById("inputYear").value + "-01-01&api-key=VpUnc9iC1dtZB9ka4zzUrJjNQ4Klo0N1")
+        .then(a => a.json())//converts the response which is currently a string into an object we can then read 
+        .then(response => {
+            for (var i = 0; i < 5; i++) {
+              document.getElementById("outputYear").innerHTML +="<h2>" + response.results.lists[0].books[i].title + "</h2>" + "<p>" + response.results.lists[0].books[i].author + "</p>" + "<img src='https://storage.googleapis.com/du-prd/books/images/" + response.results.lists[0].books[i].primary_isbn13 + ".jpg'>" + "<p>" + response.results.lists[0].books[i].description + "</p>" ;
+            }
+            // console.log(response.results.lists[0].books[i].primary_isbn13 )
+        });
+}
+
 //local storage for subscribing
 function store(){
     var inputEmail= document.getElementById("email");

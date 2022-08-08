@@ -22,9 +22,13 @@
             <nav class="navBar">
                 <div class="plug">
                     <input class="" placeholder="search" id="input" />
-                    <button id="book-btn" class="bookLink" onclick="getBooks()">
+                    <a href="#bookLink"><button id="book-btn" class="bookLink" onclick="getBooks()">
                         Get Book by name
-                    </button>
+                    </button></a>
+
+                    <input id="inputYear">
+                    <button id = "year-btn" onclick="getYear()">Get Book by Year</button>
+
                 </div>
                 <a href="#about" class="about">About</a>
                 <a href="#subscribe" class="Subscribe">Subscribe</a>
@@ -42,9 +46,11 @@
                     <div class="dropDown">
                         <div class="plug">
                             <input class="" id="input2" />
-                            <button id="book-btn" class="bookLink" onclick="getBooks2()">
+                            <button id="book-btn2" class="bookLink" onclick="getBooks2()">
                                 Get Book by name
                             </button>
+                            <input id="inputYear">
+                            <button id = "year-btn2" onclick="getYear()">Get Book by Year</button>
                         </div>
                         <a href="#about" class="nav-tabs hoverable mx-4">About</a>
                         <a href="#subscribe" class="nav-tabs hoverable mx-4">Subscribe</a>
@@ -70,11 +76,13 @@
             </div>
         </section>
 
-        <section class="books" id="books">
+        <section class="books" id="bookLink">
             <div class="container">
                 <div class="books-grid">
                     <div id="output" class="bookPut"></div>
                 </div>
+                <div id="outputYear"></div>
+                <div id="outputYear2"></div>
                 <div class="books-grid">
                     <div id="output2" class="bookPut"></div>
                 </div>
