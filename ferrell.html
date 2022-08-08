@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/164afc97fd.js" crossorigin="anonymous"></script>
+    <link href="./assets/styles.css" rel="stylesheet">
+    <title>Bookly</title>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1><span>Bookly</span></h1>
+            <nav class="navbar">
+                <div class="nav-books pe-4">
+                    <input class="" id="input">
+                    <button id="book-btn" class="btn-btn teal lighten-2" onclick="getBooks()">Get Book by name</button>
+                </div>
+                <a href="#about" class="nav-tabs hoverable mx-4">About</a>
+                <a href="#subscribe" class="nav-tabs hoverable mx-4">Subscribe</a>
+                <a href="#contact" class="nav-tabs hoverable mx-4">Contact</a>
+            </nav>
+        </div>
+        <div class="mobileContainer">
+            <h2><span>Bookly</span></h2>
+            <nav class="mobileBar">
+              <div class="menu">
+                <div class = "menuButton"><button class = menuBtn>Menu</button></div>
+                <div class = "closeButton"><button class = menuBtn>Close</button></div>
+                <div class="dropDown">
+                    <div class="nav-books pe-4">
+                        <input class="" id="input">
+                        <button id="book-btn" class="btn-btn teal lighten-2" onclick="getBooks()">Get Book by name</button>
+                    </div>
+                    <a href="#about" class="nav-tabs hoverable mx-4">About</a>
+                    <a href="#subscribe" class="nav-tabs hoverable mx-4">Subscribe</a>
+                    <a href="#contact" class="nav-tabs hoverable mx-4">Contact</a>
+                </div>
+              </div>
+            </nav>
+          </div>
+    </header>
+
+    <main>
+        <section class="quote-sect">
+            <h2 class=" quote-text center mx-4">“There is no friend as loyal as a book.” -Ernest Hemingway</h2>
+            <div class = "book">
+                <figure class = "img-box-box">
+                    <img src="./assets/images/books.jpg">
+                </figure>
+            </div>
+        </section>
+        
+        <section id="about" class="m-4">
+            <div class="containter">
+                <div class="about-bookly p-4 center">
+                    <h2 class="p-3">How Bookly came to be</h2>
+                    <p class="statement">Our mission is to make your reading experience as enjoyable as can be. One place to
+                        search for your favorite book and a direct link to buy that book.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="container-fluid">
+            <div id="subscribe" class="subscribe-info subcribe-text ">
+                <h2> Subscribe to Bookly!</h2>
+                <form id="form" action="" class="">
+                    <input onclick="store()" name="email" id="email" type="email" placeholder="Subscribe to our email list" required>
+                    <input id="submit" type="submit" value="Subscribe" class="btn">
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <div class="grid-container"></div>
+    <div id="output" class="grid-item"></div>
+    <div id="output2" class="grid-item"></div>
+
+    <!--quote section-->
+<!-- maybe use span -->
+
+
+
+
+    <!--subscribe section-->
+
+
+    <section id="contact" class="contact-list center">
+        <h2 class="p-2">Let us know</h2>
+        <p class="contact-text">If you enjoyed Bookly let us know and contact us with any questions!</p>
+        <div class="contact-links p-2">
+            <a href="https://www.facebook.com/" target="_blank" class="btn contact-details"><i
+                    class="fab fa-facebook-square"></i> Facebook</a>
+            <a id="profile-link" href="https://www.instagram.com/" target="_blank" class="btn contact-details"><i
+                    class="fa-brands fa-instagram"></i>Instagram</a>
+            <a href="https://twitter.com/i/flow/login" target="_blank" class="btn contact-details"><i
+                    class="fab fa-twitter"></i> Twitter</a>
+            <a href="mailto:example@example.com" class="btn contact-details"><i class="fas fa-at"></i> Send a
+                mail</a>
+        </div>
+    </section>
+
+    <footer class=" center brown lighten-4 p-2">
+        <div class="footer-copyright">
+            <div class="container">
+                © 2022 Copyright Bookly
+            </div>
+        </div>
+    </footer>
+
+    <script src="./assets/script.js"></script>
+</body>
+
+</html>
