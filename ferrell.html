@@ -21,14 +21,14 @@
             <h1><span>Bookly</span></h1>
             <nav class="navBar">
                 <div class="plug">
-                    <input class="" id="input" />
+                    <input class="" placeholder="search" id="input" />
                     <button id="book-btn" class="bookLink" onclick="getBooks()">
                         Get Book by name
                     </button>
                 </div>
-                <a href="#about" class="nav-tabs hoverable mx-4">About</a>
-                <a href="#subscribe" class="nav-tabs hoverable mx-4">Subscribe</a>
-                <a href="#contact" class="nav-tabs hoverable mx-4">Contact</a>
+                <a href="#about" class="about">About</a>
+                <a href="#subscribe" class="Subscribe">Subscribe</a>
+                <a href="#contact" class="Contact">Contact</a>
             </nav>
         </div>
         <div class="mobileContainer">
@@ -40,9 +40,9 @@
                         <button class="menuBtn">Close</button>
                     </div>
                     <div class="dropDown">
-                        <div class="nav-books pe-4">
+                        <div class="plug">
                             <input class="" id="input" />
-                            <button id="book-btn" class="btn-btn teal lighten-2" onclick="getBooks()">
+                            <button id="book-btn" class="bookLink" onclick="getBooks()">
                                 Get Book by name
                             </button>
                         </div>
@@ -58,9 +58,10 @@
     <main>
         <section id="home" class="banner">
             <div class="container">
-                <h2 class="quote-text center mx-4">
-                    “There is no friend as loyal as a book.” -Ernest Hemingway
-                </h2>
+                <div class="content">
+                    <h1 class="quote-text center mx-4">“There is no friend as loyal as a book.” - </h1>
+                    <h3> -Ernest Hemingway</h3>
+                </div>
                 <div class="book">
                     <figure class="img-box-box">
                         <!-- <img src="./assets/images/books.jpg"> -->
@@ -72,7 +73,7 @@
         <section class="books" id="books">
             <div class="container">
                 <div class="books-grid">
-                    <div id="output" class="grid-item"></div>
+                    <div id="output" class="bookPut"></div>
                 </div>
             </div>
         </section>
@@ -136,8 +137,7 @@
                         </div>
                     </div>
                 </div>
-                <h2 class="p-2">Let us know</h2>
-                <p class="contact-text">If you enjoyed Bookly let us know and contact us with any questions!</p>
+                <h2 class="p-2">Let us know how we did</h2>
                 <form>
                     <div class="form-grid">
                         <input type="text" name="name" id="name" placeholder="name" class="form-element" />
@@ -163,10 +163,9 @@
         </section>
     </main>
 
-    <footer class="center brown lighten-4 p-2">
-        <div class="footer-copyright">
-            <div class="container">© 2022 Copyright Bookly</div>
-        </div>
+    <footer>
+        <div class="footBox">
+           <p>© 2022 Copyright Bookly</p>
     </footer>
     <script src="./assets/script.js"></script>
 </body>

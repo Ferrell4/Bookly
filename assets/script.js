@@ -10,13 +10,17 @@
 }
 */
 
-//response.items.[i].imageLinks.thumbnail  
+//response.items.[i].imageLinks.thumbnail
 
-var openLibraryApi = "http://openlibrary.org/search.json?q="
-var googleBooksApi = "https://books.googleapis.com/books/v1/volumes?q="
-var googleSearchApi = "https://books.googleapis.com/books/v1/volumes?q=" + document.getElementById("input").value + "&key=AIzaSyB0jD4ojzXkBjv5QQueyFNrhDdBgI0Azqc"
-var testApi = "https://books.googleapis.com/books/v1/volumes?q=love&key=AIzaSyB0jD4ojzXkBjv5QQueyFNrhDdBgI0Azqc"
-console.log(testApi)
+var openLibraryApi = "http://openlibrary.org/search.json?q=";
+var googleBooksApi = "https://books.googleapis.com/books/v1/volumes?q=";
+var googleSearchApi =
+  "https://books.googleapis.com/books/v1/volumes?q=" +
+  document.getElementById("input").value +
+  "&key=AIzaSyB0jD4ojzXkBjv5QQueyFNrhDdBgI0Azqc";
+var testApi =
+  "https://books.googleapis.com/books/v1/volumes?q=love&key=AIzaSyB0jD4ojzXkBjv5QQueyFNrhDdBgI0Azqc";
+console.log(testApi);
 
 // function getBooks(){
 //     document.getElementById('output').innerHTML= "";
@@ -33,39 +37,82 @@ console.log(testApi)
 // }
 
 function getAuthor() {
-    document.getElementById('output2').innerHTML = "";
-    fetch("https://books.googleapis.com/books/v1/volumes?q=" + document.getElementById("input2").value + "&key=AIzaSyB0jD4ojzXkBjv5QQueyFNrhDdBgI0Azqc")
-        .then(a => a.json())//converts the response which is currently a string into an object we can then read
-        .then(response => {
-            // for(var i = 0; i < response.items.length;i++){
-            //     document.getElementById("output").innerHTML +="<h2>" + response.items[i].volumeInfo.title + "</h2>"+response.items[i].volumeInfo.authors+" <br> <img src='http://books.google.com/books/content?id=" +response.items[i].id+ "&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api'><br>";
-            // }
-            for (var i = 0; i < 15; i++) {
-                document.getElementById("output2").innerHTML += "<h2>" + response.items[i].volumeInfo.authors + "</h2><br> <img src='http://books.google.com/books/content?id=" + response.items[i].id + "&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api'><br>" + response.items[i].volumeInfo.description;
-            }
-        });
+  document.getElementById("output2").innerHTML = "";
+  fetch(
+    "https://books.googleapis.com/books/v1/volumes?q=" +
+      document.getElementById("input2").value +
+      "&key=AIzaSyB0jD4ojzXkBjv5QQueyFNrhDdBgI0Azqc"
+  )
+    .then((a) => a.json()) //converts the response which is currently a string into an object we can then read
+    .then((response) => {
+      // for(var i = 0; i < response.items.length;i++){
+      //     document.getElementById("output").innerHTML +="<h2>" + response.items[i].volumeInfo.title + "</h2>"+response.items[i].volumeInfo.authors+" <br> <img src='http://books.google.com/books/content?id=" +response.items[i].id+ "&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api'><br>";
+      // }
+      for (var i = 0; i < 15; i++) {
+        document.getElementById("output2").innerHTML +=
+          "<h2>" +
+          response.items[i].volumeInfo.authors +
+          "</h2><br> <img src='http://books.google.com/books/content?id=" +
+          response.items[i].id +
+          "&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api'><br>" +
+          response.items[i].volumeInfo.description;
+      }
+    });
 }
 
 function getBooks() {
-    document.getElementById('output').innerHTML = "";
-    fetch("https://books.googleapis.com/books/v1/volumes?q=" + document.getElementById("input").value + "&key=AIzaSyB0jD4ojzXkBjv5QQueyFNrhDdBgI0Azqc")
-        .then(a => a.json())//converts the response which is currently a string into an object we can then read
-        .then(response => {
-            // for(var i = 0; i < response.items.length;i++){
-            //     document.getElementById("output").innerHTML +="<h2>" + response.items[i].volumeInfo.title + "</h2>"+response.items[i].volumeInfo.authors+" <br> <img src='http://books.google.com/books/content?id=" +response.items[i].id+ "&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api'><br>";
-            // }
-            for (var i = 0; i < 4; i++) {
-                console.log(response.items[i].saleInfo)
-                document.getElementById("output").innerHTML += "<h2>" + response.items[i].volumeInfo.title + "</h2>" +
-                    response.items[i].volumeInfo.authors + " <br> " +
-                    '<a href="' + response.items[i].saleInfo.buyLink + '" target=blank>' +
-                    " <img src='http://books.google.com/books/content?id=" + response.items[i].id + "&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api' >" + "</a>" + " <br>" + response.items[i].volumeInfo.description;
-            }
-        });
+  document.getElementById("output").innerHTML = "";
+  fetch(
+    "https://books.googleapis.com/books/v1/volumes?q=" +
+      document.getElementById("input").value +
+      "&key=AIzaSyB0jD4ojzXkBjv5QQueyFNrhDdBgI0Azqc"
+  )
+    .then((a) => a.json()) //converts the response which is currently a string into an object we can then read
+    .then((response) => {
+      // for(var i = 0; i < response.items.length;i++){
+      //     document.getElementById("output").innerHTML +="<h2>" + response.items[i].volumeInfo.title + "</h2>"+response.items[i].volumeInfo.authors+" <br> <img src='http://books.google.com/books/content?id=" +response.items[i].id+ "&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api'><br>";
+      // }
+      for (var i = 0; i < 4; i++) {
+        console.log(response.items[i].saleInfo);
+        document.getElementById("output").innerHTML +=
+          "<h2>" +
+          response.items[i].volumeInfo.title +
+          "</h2>" +
+          response.items[i].volumeInfo.authors +
+          " <br> " +
+          '<a href="' +
+          response.items[i].saleInfo.buyLink +
+          '" target=blank>' +
+          " <img src='http://books.google.com/books/content?id=" +
+          response.items[i].id +
+          "&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api' >" +
+          "</a>" +
+          " <br>" +
+          response.items[i].volumeInfo.description;
+      }
+    });
 }
 
 //local storage for subscribing
-function store(){
-    var inputEmail= document.getElementById("email");
-    localStorage.setItem("email", inputEmail.value);
-   };
+function store() {
+  var inputEmail = document.getElementById("email");
+  localStorage.setItem("email", inputEmail.value);
+}
+
+const menu_button = document.querySelector(".menuButton button");
+const close_button = document.querySelector(".closeButton button");
+const closeOpen = document.querySelector(".closeButton");
+const menuClose = document.querySelector(".menuButton");
+const dropDown = document.querySelector(".dropDown");
+
+menu_button.onclick = () => {
+  dropDown.classList.add("activeDrop");
+  menuClose.classList.add("activeMenu");
+  closeOpen.classList.add("activeClose");
+};
+
+close_button.onclick = () => {
+  closeOpen.classList.remove("activeClose");
+  menuClose.classList.remove("activeMenu");
+  dropDown.classList.remove("activeDrop");
+};
