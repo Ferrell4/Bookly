@@ -1,8 +1,8 @@
 :root {
-  --primary: rgba(161, 61, 161, 0.493);
+  --primary: rgba(195, 189, 195, 0.493);
   --light: white;
   --dark: #212121;
-  --pink: #ff9fd8;
+  --pink: #363732;
 }
 
 * {
@@ -10,7 +10,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Fira Sans";
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 
 body {
@@ -119,6 +119,7 @@ nav.navBar a:hover {
   transition: 0.4s;
 }
 
+
 nav.mobileBar .menu .menuButton {
   display: inline-block;
 }
@@ -214,6 +215,8 @@ main .container h3 {
   margin-bottom: 32px;
 }
 
+
+
 .about {
   /* background-color: var(--primary); */
   background: none;
@@ -244,4 +247,165 @@ main .container h3 {
   color: white;
 }
 
-
+.contact {
+    background-color: var(--primary);
+  }
+  
+  .contact .container {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+  
+  
+  .contact-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 16px;
+    text-align: center;
+  
+    margin-bottom: 16px;
+  }
+  
+  .contact-grid .link .content {
+    padding: 16px;
+  }
+  
+  .contact .container form {
+    display: block;
+    margin: 0 auto;
+    max-width: 680px;
+  }
+  
+  .contact .container form .form-grid {
+    display: grid;
+    grid-gap: 16px;
+    grid-template-columns: repeat(2, 1fr);
+    margin-bottom: 16px;
+  }
+  
+  .contact .container form .form-grid .form-element {
+    /* this will remove the css from browser */
+    appearance: none;
+    border: none;
+    outline: none;
+    background: none;
+  
+    display: block;
+    width: 100%;
+    background-color: white;
+    border-radius: 8px;
+  
+    padding: 16px;
+    font-size: 20px;
+    color: var(--dark);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.5);
+  }
+  
+  .contact .container form .form-grid .form-element::placeholder {
+    color: #aaa;
+  }
+  
+  /* this makes sure that the text covers the length of the grids above it */
+  .contact .container form .form-grid .form-area {
+    grid-column: 1/-1;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+  
+    padding-left: 16px;
+    padding-top: 16px;
+    font-size: 20px;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.5);
+  }
+  
+  .contact .container form .form-grid .form-area::placeholder {
+    color: #aaa;
+  }
+  
+  .contact .container .align {
+    text-align: center;
+  }
+  
+  .footBox {
+    background-color: var(--dark);
+    text-align: center;
+    border-top: 5px solid var(--dark);
+    padding-top: 16px;
+    
+    color: white;
+    padding-bottom: 16px;
+  }
+  
+  @media (max-width: 1024px) {
+    .container {
+      padding-left: 64px;
+      padding-right: 64px;
+    }
+  
+    .services .container .services-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .projects .projects-grid .project .content p {
+      font-size: 16px;
+    }
+    .contact-grid{
+     grid-template-columns: repeat(1, 1fr);
+    }
+    .projects .projects-grid {
+     grid-template-columns: repeat(2, 1fr);
+   }
+  }
+  
+  @media (max-width: 768px) {
+    .projects .projects-grid {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    nav.navBar {
+      display: none;
+    }
+  
+    nav.mobileBar .menu{
+      display: grid;
+    }
+    main .container h1 {
+      font-size: 36px;
+    }
+    .hide-mob {
+      display: none;
+    }
+    main .container h3 {
+      font-size: 20px;
+    }
+    .container {
+      padding-left: 32px;
+      padding-right: 32px;
+      text-align: center;
+    }
+  
+    header .container {
+      display: none;
+    }
+    .mobileContainer {
+      display: block;
+    }
+  
+    .mobileContainer h2 {
+      display: block;
+    }
+  
+    .button {
+      font-size: 18px;
+    }
+    .contact-grid{
+     grid-template-columns: repeat(1, 1fr);
+    }
+    .services .container .services-grid {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    .contact .container form .form-grid {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    .contact .container .right-align {
+      text-align: center;
+    }
+  }
