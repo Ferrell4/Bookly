@@ -1,0 +1,247 @@
+:root {
+  --primary: rgba(161, 61, 161, 0.493);
+  --light: white;
+  --dark: #212121;
+  --pink: #ff9fd8;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Fira Sans";
+  border: 1px solid red;
+}
+
+body {
+  align-items: center;
+  background-image: url(./images/books.jpg);
+  background-position: fixed;
+  background-size: cover;
+
+  background-attachment: fixed;
+}
+
+.container {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding-left: 128px;
+  padding-right: 128px;
+
+  align-items: center;
+  width: 100%;
+}
+
+section h2 {
+  text-align: center;
+  margin-bottom: 32px;
+  text-transform: uppercase;
+  font-size: 36px;
+
+  color: white;
+  background-color: var(--pink);
+  border-radius: 8px;
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.5);
+}
+
+.button {
+  /* this will remove browser css */
+  appearance: none;
+  border: none;
+  outline: none;
+  background: none;
+
+  display: inline-block;
+  color: white;
+  background-color: var(--pink);
+  padding: 12px 16px;
+
+  border-radius: 8px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 700;
+
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.5);
+}
+
+.button:hover {
+  color: var(--dark);
+  border: 4px solid var(--dark);
+  transition: 0.4s;
+}
+
+img {
+  max-width: 100%;
+}
+
+header {
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  z-index: 99;
+  /* background-color: var(--dark);
+    opacity: 0.9; */
+}
+
+header .container {
+  padding-top: 32px;
+  padding-bottom: 32px;
+  display: flex;
+  justify-content: space-between;
+}
+
+header .container h2 {
+  color: inherit;
+  text-transform: uppercase;
+  font-size: 32px;
+  font-weight: 900;
+}
+
+header .container span {
+  font-weight: 900;
+}
+
+nav.navBar a {
+  color: inherit;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+nav.navBar a:hover {
+  background-color: var(--pink);
+  border: 3px solid var(--dark);
+  border-radius: 10px;
+  transition: 0.4s;
+}
+
+nav.mobileBar .menu .menuButton {
+  display: inline-block;
+}
+
+nav.mobileBar .menu .closeButton {
+  display: none;
+}
+
+nav.mobileBar .menu .menuBtn:hover {
+  color: var(--dark);
+  border: 4px solid var(--dark);
+  transition: 0.4s;
+}
+
+nav.mobileBar .menu .dropDown {
+  display: none;
+}
+
+nav.mobileBar .menu .menuButton.activeMenu {
+  display: none;
+}
+
+nav.mobileBar .menu .closeButton.activeClose {
+  display: inline-block;
+}
+
+nav.mobileBar .menu .dropDown.activeDrop {
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+}
+
+nav.mobileBar .menu .dropDown a {
+  color: inherit;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.mobileContainer h2 {
+  display: none;
+  text-align: center;
+}
+
+nav.mobileBar .menu .dropDown a:hover {
+  background-color: var(--pink);
+  border: 3px solid var(--dark);
+  border-radius: 10px;
+  transition: 0.4s;
+}
+
+main section.banner {
+  color: white;
+  position: relative;
+  min-height: 50vh;
+  display: flex;
+
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+main section.banner:after {
+  /* this attribute is needed to be able to display after content */
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+
+  left: 0;
+  right: 0;
+  z-index: 0;
+  background-color: #12002f;
+  opacity: 0.8;
+}
+
+main .container {
+  position: relative;
+  z-index: 1;
+}
+
+main .container h1 {
+  font-size: 72px;
+  margin-bottom: 32px;
+}
+
+main .container h1 span {
+  color: var(--pink);
+  text-shadow: 0px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+main .container h3 {
+  font-size: 36px;
+  font-weight: 400;
+  margin-bottom: 32px;
+}
+
+.about {
+  /* background-color: var(--primary); */
+  background: none;
+  background-color: none;
+}
+
+.about .container {
+  padding-top: 64px;
+  padding-bottom: 64px;
+}
+
+.about .about-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 16px;
+  text-align: center;
+}
+
+.about .about-grid .content {
+  padding: 16px;
+}
+
+.about .about-grid .content p {
+  background-color: var(--pink);
+  margin-bottom: 10px;
+  padding: 4px;
+  border-radius: 16px;
+  color: white;
+}
+
+

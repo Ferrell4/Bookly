@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/164afc97fd.js" crossorigin="anonymous"></script>
-    <link href="./assets/styles.css" rel="stylesheet">
+    <link href="./assets/ferrell.css" rel="stylesheet">
     <title>Bookly</title>
 </head>
 
@@ -50,64 +50,89 @@
     </header>
 
     <main>
-        <section class="quote-sect">
-            <h2 class=" quote-text center mx-4">“There is no friend as loyal as a book.” -Ernest Hemingway</h2>
-            <div class = "book">
-                <figure class = "img-box-box">
-                    <img src="./assets/images/books.jpg">
-                </figure>
-            </div>
-        </section>
-        
-        <section id="about" class="m-4">
-            <div class="containter">
-                <div class="about-bookly p-4 center">
-                    <h2 class="p-3">How Bookly came to be</h2>
-                    <p class="statement">Our mission is to make your reading experience as enjoyable as can be. One place to
-                        search for your favorite book and a direct link to buy that book.</p>
+        <section id = "home" class="banner">
+            <div class="container">
+                <h2 class=" quote-text center mx-4">“There is no friend as loyal as a book.” -Ernest Hemingway</h2>
+                <div class = "book">
+                    <figure class = "img-box-box">
+                        <!-- <img src="./assets/images/books.jpg"> -->
+                    </figure>
                 </div>
             </div>
         </section>
         
-        <section class="container-fluid">
-            <div id="subscribe" class="subscribe-info subcribe-text ">
+        <section id="about" class="about">
+            <div class ="containter">
+                <h2>How Bookly came to be</h2>
+                <div class="about-grid">
+                    <div class="content">
+                        <p>Our mission is to make your reading experience as enjoyable as can be. One place to
+                            search for your favorite book and a direct link to buy that book.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="subscribe" class="subscribe">
+            <div class="container">
+                <h2> Contact Us</h2>
                 <h2> Subscribe to Bookly!</h2>
-                <form id="form" action="" class="">
-                    <input onclick="store()" name="email" id="email" type="email" placeholder="Subscribe to our email list" required>
-                    <input id="submit" type="submit" value="Subscribe" class="btn">
-                </form>
+                <div class="subscribe-grid">
+                    <div class="content">
+                        <form>
+                            <div class="form-grid">
+                              <input
+                                type="text"
+                                name="name"
+                                id="name"
+                                placeholder="name"
+                                class="form-element"
+                              />
+                              <input
+                                type="email"
+                                name="email"
+                                id="email"
+                                placeholder="email"
+                                class="form-element"
+                              />
+                              <textarea
+                                name="message"
+                                id="message"
+                                placeholder="Message"
+                                class="form-area"
+                              ></textarea>
+                            </div>
+                            <div class="right-align">
+                              <input type="submit" value="Send Message" class="button" />
+                            </div>
+                          </form>
+                        <!-- <form id="form" action="" class="">
+                            <input onclick="store()" name="email" id="email" type="email" placeholder="Subscribe to our email list" required>
+                            <input id="submit" type="submit" value="Subscribe" class="btn">
+                        </form> -->
+                    </div>
+                </div>
             </div>
         </section>
 
+        <section id="contact" class="contact-list center">
+            <div class="container">
+                <h2 class="p-2">Let us know</h2>
+                <p class="contact-text">If you enjoyed Bookly let us know and contact us with any questions!</p>
+                <div class="contact-links p-2">
+                    <a href="https://www.facebook.com/" target="_blank" class="btn contact-details"><i
+                            class="fab fa-facebook-square"></i> Facebook</a>
+                    <a id="profile-link" href="https://www.instagram.com/" target="_blank" class="btn contact-details"><i
+                            class="fa-brands fa-instagram"></i>Instagram</a>
+                    <a href="https://twitter.com/i/flow/login" target="_blank" class="btn contact-details"><i
+                            class="fab fa-twitter"></i> Twitter</a>
+                    <a href="mailto:example@example.com" class="btn contact-details"><i class="fas fa-at"></i> Send a
+                        mail</a>
+                </div>
+            </div>
+
+        </section>
     </main>
-
-    <div class="grid-container"></div>
-    <div id="output" class="grid-item"></div>
-    <div id="output2" class="grid-item"></div>
-
-    <!--quote section-->
-<!-- maybe use span -->
-
-
-
-
-    <!--subscribe section-->
-
-
-    <section id="contact" class="contact-list center">
-        <h2 class="p-2">Let us know</h2>
-        <p class="contact-text">If you enjoyed Bookly let us know and contact us with any questions!</p>
-        <div class="contact-links p-2">
-            <a href="https://www.facebook.com/" target="_blank" class="btn contact-details"><i
-                    class="fab fa-facebook-square"></i> Facebook</a>
-            <a id="profile-link" href="https://www.instagram.com/" target="_blank" class="btn contact-details"><i
-                    class="fa-brands fa-instagram"></i>Instagram</a>
-            <a href="https://twitter.com/i/flow/login" target="_blank" class="btn contact-details"><i
-                    class="fab fa-twitter"></i> Twitter</a>
-            <a href="mailto:example@example.com" class="btn contact-details"><i class="fas fa-at"></i> Send a
-                mail</a>
-        </div>
-    </section>
 
     <footer class=" center brown lighten-4 p-2">
         <div class="footer-copyright">
@@ -116,6 +141,10 @@
             </div>
         </div>
     </footer>
+
+    <div class="grid-container"></div>
+    <div id="output" class="grid-item"></div>
+    <div id="output2" class="grid-item"></div>
 
     <script src="./assets/script.js"></script>
 </body>
