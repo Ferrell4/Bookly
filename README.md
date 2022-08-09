@@ -4,7 +4,7 @@
 ---
 ```
 
-Our group will use everything we have learned over the past sex modules to create a real-world front-end application that we can showcase to potential employers. 
+Bookly is an example of front end technology, command-line fundamentals, leveraging other people’s servers and APIs. It's a library app with the ability to search and inform on books. Also, Bookly searches for the best sellers according to the year.  
 ```
 
 ## User Story
@@ -13,7 +13,7 @@ Our group will use everything we have learned over the past sex modules to creat
 AS AN avid reader
 I WANT to see a vast content of books
 SO THAT I can search for any book 
-AND have a link to direct me to purchase said book
+AND populate the list of best sellers according to the year
 
 ```
 
