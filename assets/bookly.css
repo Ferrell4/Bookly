@@ -70,6 +70,8 @@ section h2 {
   box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.5);
 }
 
+#book-btn
+
 .button:hover {
   border: 4px solid var(--dark);
   transition: 0.4s;
@@ -96,6 +98,10 @@ header .container {
   padding-bottom: 32px;
   display: flex;
   justify-content: space-between;
+}
+
+header .searchBar{
+  width: 100px;
 }
 
 header .container h2 {
@@ -269,6 +275,11 @@ main .container h3 {
   font-weight: 400;
   margin-bottom: 32px;
 }
+
+/* .search .container{
+  min-height: 100vh;
+} */
+
 
 .books .books-grid {
   display: grid;
