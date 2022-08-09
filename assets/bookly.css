@@ -10,7 +10,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Fira Sans";
-  /* border: 1px solid red; */
+  border: 1px solid red;
 }
 
 body {
@@ -94,8 +94,8 @@ header {
 }
 
 header .container {
-  padding-top: 32px;
-  padding-bottom: 32px;
+  padding-top: 8px;
+  padding-bottom: 8px;
   display: flex;
   justify-content: space-between;
 }
@@ -136,8 +136,8 @@ nav.navBar a:hover {
 }
 
 .mobileContainer {
-  padding-top: 32px;
-  padding-bottom: 32px;
+  padding-top: 8px;
+  padding-bottom: 8px;
   display: none;
 
   max-width: 786px;
@@ -276,9 +276,22 @@ main .container h3 {
   margin-bottom: 32px;
 }
 
-/* .search .container{
-  min-height: 100vh;
-} */
+.banner .container{
+  text-align: center;
+  align-content: center;
+  align-items: center;
+}
+
+
+.search-grid .plug{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.search-grid .plug input{
+  /* max-width: 260px; */
+  text-align: center;
+}
 
 
 .books .books-grid {
@@ -433,6 +446,12 @@ main .container h3 {
   .contact-grid {
     grid-template-columns: repeat(1, 1fr);
   }
+
+  .search-grid .plug{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    width: auto;
+}
 }
 
 @media (max-width: 768px) {
