@@ -33,7 +33,7 @@ AND populate the list of best sellers according to the year
 - CSS
 - Javascript
 - Bootstrap
-- Sass
+- Tailwind
 - API's
 
 ```
