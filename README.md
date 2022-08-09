@@ -21,7 +21,7 @@ AND populate the list of best sellers according to the year
 ---
 ```
 
-- GitHub:
+- GitHub: https://github.com/Ferrell4/Bookly
 - Deployed:
 
 ```
