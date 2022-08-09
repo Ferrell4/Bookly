@@ -294,6 +294,7 @@ main .container h3 {
   /* max-width: 260px; */
   text-align: center;
   border-radius: 16px;
+  outline: none;
 }
 
 .search-grid .plug input::placeholder{
