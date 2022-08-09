@@ -287,11 +287,13 @@ main .container h3 {
 .search-grid .plug{
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  margin: 16px
 }
 
 .search-grid .plug input{
   /* max-width: 260px; */
   text-align: center;
+  border-radius: 16px;
 }
 
 .search-grid .plug input::placeholder{
