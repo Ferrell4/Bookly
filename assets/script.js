@@ -32,6 +32,13 @@ console.log(testApi)
 //     } );
 // }
 
+
+const book_link = document.querySelector(".bookLink button");
+const year_link = document.querySelector(".yearLink button");
+const books_grid = document.querySelector(".books-grid");
+const years_grid = document.querySelector(".years-grid");
+
+
 function getAuthor() {
     document.getElementById('output2').innerHTML = "";
     fetch("https://books.googleapis.com/books/v1/volumes?q=" + document.getElementById("input2").value + "&key=AIzaSyB0jD4ojzXkBjv5QQueyFNrhDdBgI0Azqc")
@@ -47,6 +54,8 @@ function getAuthor() {
 }
 
 function getBooks() {
+    books_grid.classList.add("activeBook");
+    years_grid.classList.remove("activeYear");
     document.getElementById('output').innerHTML = "";
     fetch("https://books.googleapis.com/books/v1/volumes?q=" + document.getElementById("input").value + "&key=AIzaSyB0jD4ojzXkBjv5QQueyFNrhDdBgI0Azqc")
         .then(a => a.json())//converts the response which is currently a string into an object we can then read
@@ -63,38 +72,12 @@ function getBooks() {
             }
         });
 }
-function getBooks2() {
-    document.getElementById('output2').innerHTML = "";
-    fetch("https://books.googleapis.com/books/v1/volumes?q=" + document.getElementById("input2").value + "&key=AIzaSyB0jD4ojzXkBjv5QQueyFNrhDdBgI0Azqc")
-        .then(a => a.json())//converts the response which is currently a string into an object we can then read
-        .then(response => {
-            // for(var i = 0; i < response.items.length;i++){
-            //     document.getElementById("output").innerHTML +="<h2>" + response.items[i].volumeInfo.title + "</h2>"+response.items[i].volumeInfo.authors+" <br> <img src='http://books.google.com/books/content?id=" +response.items[i].id+ "&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api'><br>";
-            // }
-            for (var i = 0; i < 4; i++) {
-                console.log(response.items[i].saleInfo)
-                document.getElementById("output").innerHTML += "<h2>" + response.items[i].volumeInfo.title + "</h2>" +
-                    response.items[i].volumeInfo.authors + " <br> " +
-                    '<a href="' + response.items[i].saleInfo.buyLink + '" target=blank>' +
-                    " <img src='http://books.google.com/books/content?id=" + response.items[i].id + "&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api' >" + "</a>" + " <br>" + response.items[i].volumeInfo.description;
-            }
-        });
-}
+
 
 function getYear() {
     document.getElementById('outputYear').innerHTML = "";
-    fetch("https://api.nytimes.com/svc/books/v3/lists/full-overview.json?published_date=" + document.getElementById("inputYear").value + "-01-01&api-key=VpUnc9iC1dtZB9ka4zzUrJjNQ4Klo0N1")
-        .then(a => a.json())//converts the response which is currently a string into an object we can then read 
-        .then(response => {
-            for (var i = 0; i < 5; i++) {
-              document.getElementById("outputYear").innerHTML +="<h2>" + response.results.lists[0].books[i].title + "</h2>" + "<p>" + response.results.lists[0].books[i].author + "</p>" + "<img src='https://storage.googleapis.com/du-prd/books/images/" + response.results.lists[0].books[i].primary_isbn13 + ".jpg'>" + "<p>" + response.results.lists[0].books[i].description + "</p>" ;
-            }
-            // console.log(response.results.lists[0].books[i].primary_isbn13 )
-        });
-}
-
-function getYear2() {
-    document.getElementById('outputYear2').innerHTML = "";
+    books_grid.classList.remove("activeBook");
+    years_grid.classList.add("activeYear");
     fetch("https://api.nytimes.com/svc/books/v3/lists/full-overview.json?published_date=" + document.getElementById("inputYear").value + "-01-01&api-key=VpUnc9iC1dtZB9ka4zzUrJjNQ4Klo0N1")
         .then(a => a.json())//converts the response which is currently a string into an object we can then read 
         .then(response => {
@@ -130,3 +113,11 @@ close_button.onclick = ()=>{
     menuClose.classList.remove("activeMenu");
     dropDown.classList.remove("activeDrop");
 }
+// book_link.onclick = ()=>{
+//     books_grid.classList.add("activeBook");
+//     books_grid.classList.remove("activeYear");
+// } 
+
+// function bookLink(){
+//     books_grid.classList.add("activeBook");
+// }
