@@ -22,7 +22,7 @@ AND populate the list of best sellers according to the year
 ```
 
 - GitHub: https://github.com/Ferrell4/Bookly
-- Deployed:
+- Deployed: https://ferrell4.github.io/Bookly/
 
 ```
 
@@ -33,12 +33,14 @@ AND populate the list of best sellers according to the year
 - CSS
 - Javascript
 - Bootstrap
-- Materialize
+- Sass
 - API's
 
 ```
 
 ## Demo
 ---
-```
+
+![A user writes Frida on the search bar and clicks to find a book about frida then is shown books with that name then user writes 2010 on the next search bar to find a popular book that year.](./assets/images/Bookly.gif)
+
  
