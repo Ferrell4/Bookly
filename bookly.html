@@ -11,7 +11,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation&display=swap" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation&display=swap" rel="stylesheet" />
         <script src="https://kit.fontawesome.com/164afc97fd.js" crossorigin="anonymous"></script>
-        <script src="https://cdn.tailwindcss.com"></script>
+        <!-- <script src="https://cdn.tailwindcss.com"></script> -->
         <link href="./assets/bookly.css" rel="stylesheet" />
         <title>Bookly</title>
     </head>
@@ -78,18 +78,6 @@
                 </div>
             </section>
 
-            <section id="subscribe" class="subscribe">
-                <div class="container">
-                    <h2>Subscribe for the latest Book releases</h2>
-                    <form>
-                        <div class="form-grid">
-                            <textarea name="email" id="email" placeholder="email" class="form-area"></textarea>
-                        </div>
-                        <div class="align">
-                            <input onclick="store()" type="submit" value="Submit" class="button bg-neutral-700" required/>
-                    </form>
-            </section>
-
             <section class="books" id="bookLink">
                 <div class="container">
                     <div class="books-grid">
@@ -114,6 +102,17 @@
                         </div>
                     </div>
                 </div>
+            </section>
+
+            <section id="subscribe" class="subscribe">
+                <div class="container">
+                    <h2>Subscribe for the latest Book releases</h2>
+                    <form>
+                        <div class="form-grid">
+                            <input type="email" name="email" id="email" placeholder="email" class="form-element" />                        </div>
+                        <div class="align">
+                            <input onclick="store()" type="submit" value="Submit" class="button bg-neutral-700" required/>
+                    </form>
             </section>
 
             <section id="contact" class="contact">
@@ -160,7 +159,7 @@
                             </div>
                         </div>
                     </div>
-                    <h2 class="p-2">Let us know how we did</h2>
+                    <h2>Let us know how we did</h2>
                     <form>
                         <div class="form-grid">
                             <input type="text" name="name" id="name" placeholder="name" class="form-element" />
