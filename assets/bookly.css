@@ -299,6 +299,7 @@ main .container h3 {
   margin: 16px;
 
   padding: 4px;
+  color: var(--dark);
 }
 
 .search-grid .plug input::placeholder{
