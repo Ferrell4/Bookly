@@ -7,7 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
             integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous" />
-        <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" /> -->
+        <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />-->
         <link href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation&display=swap" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation&display=swap" rel="stylesheet" />
         <script src="https://kit.fontawesome.com/164afc97fd.js" crossorigin="anonymous"></script>
@@ -18,23 +18,17 @@
 
     <body>
         <header>
+            <!--NavBar information-->
             <div class="container">
                 <h1><span>Bookly</span></h1>
                 <nav class="navBar">
-                    <!-- <div class="plug">
-                        <input class="searchBar" placeholder="search" id="input" />
-                        <a href="#bookLink"><button id="book-btn" class="bookLink btn-sm" onclick="getBooks()">
-                            Search by name
-                        </button></a>
-                        <input class="searchBar" id="inputYear" placeholder="search">
-                        <a href="#bookLink"><button id = "year-btn" onclick="getYear()">Search by Year</button></a>
-                    </div> -->
-                    <a href="#home" class="home">Home</a>
                     <a href="#about" class="about">About</a>
                     <a href="#subscribe" class="Subscribe">Subscribe</a>
                     <a href="#contact" class="Contact">Contact</a>
                 </nav>
             </div>
+
+            <!--NavBar for Mobile Devices-->
             <div class="mobileContainer">
                 <h2><span>Bookly</span></h2>
                 <nav class="mobileBar">
@@ -43,6 +37,7 @@
                         <div class="closeButton">
                             <button class="menuBtn">Close</button>
                         </div>
+                        <!--Mobile devices have a dropdown menu. Code to the dropdown menu-->
                         <div class="dropDown">
                             <a href="#home" class="home">Home</a>
                             <a href="#about" class="about">About</a>
@@ -55,6 +50,7 @@
         </header>
 
         <main>
+            <!--Quote by Ernest Hemingway in the center of the page-->
             <section id="home" class="banner">
                 <div class="container">
                     <div class="content">
@@ -63,11 +59,12 @@
                     </div>
                     <div class="book">
                         <figure class="img-box-box">
-                            <!-- <img src="./assets/images/books.jpg"> -->
                         </figure>
                     </div>
                     <div class="search-grid">
                         <div class="plug">
+
+                            <!--Code for the search bars between get books by name and by year-->
                             <input class="" placeholder="search" id="input" />
                             <a href="#bookLink"><button id="book-btn" class="bookLink" onclick="getBooks()">
                                     Get Book by name
@@ -83,9 +80,11 @@
             <section class="books" id="bookLink">
                 <div class="container">
                     <div class="books-grid">
+                        <!--Results for when a user searches by name or keyword-->
                         <div id="output" class="bookPut"></div>
                     </div>
                     <div class="years-grid">
+                        <!--Results for when a user searches by a year starting with 2009 and later-->
                         <div id="outputYear" class="yearPut"></div>
                     </div>
                 </div>
@@ -93,6 +92,8 @@
 
             <section id="about" class="about">
                 <div class="containter">
+
+                    <!--Our motivation to creating this application-->
                     <h2>How Bookly came to be</h2>
                     <div class="about-grid">
                         <div class="content">
@@ -108,6 +109,8 @@
 
             <section id="subscribe" class="subscribe">
                 <div class="container">
+
+                    <!--Place for user to subscribe and for us to store local information-->
                     <h2>Subscribe for the latest Book releases</h2>
                     <form>
                         <div class="form-grid">
@@ -119,48 +122,30 @@
 
             <section id="contact" class="contact">
                 <div class="container">
+                    <!--Area of the page for the user to contact us via social media-->
                     <h2>Contact Us</h2>
                     <div class="contact-grid">
                         <div class="link">
-                            <!-- <figure class="img-box">
-                                <img
-                                src="./assets/images/service-3.jpg"
-                                alt="Skills"
-                                class="img"
-                                />
-                            </figure> -->
                             <div class="content">
                                 <a href="https://www.facebook.com/" target="_blank" class="button"><i
                                         class="fab fa-facebook-square"></i> Facebook</a>
                             </div>
                         </div>
                         <div class="link">
-                            <!-- <figure class="img-box">
-                                <img
-                                src="./assets/images/discord.png"
-                                alt="Skills"
-                                class="img"
-                                />
-                            </figure> -->
                             <div class="content">
                                 <a href="https://www.instagram.com/" target="_blank" class="button" button><i
                                         class="fa-brands fa-instagram"></i>Instagram</a>
                             </div>
                         </div>
                         <div class="link">
-                            <!-- <figure class="img-box">
-                                <img
-                                src="./assets/images/service-3.jpg"
-                                alt="Skills"
-                                class="img"
-                                />
-                            </figure> -->
                             <div class="content">
                                 <a href="https://twitter.com/i/flow/login" target="_blank" class="button"><i
                                         class="fab fa-twitter"></i> Twitter</a>
                             </div>
                         </div>
                     </div>
+
+                    <!--Room for the user to provide feedback an how our application is-->
                     <h2>Let us know how we did</h2>
                     <form>
                         <div class="form-grid">
@@ -171,10 +156,6 @@
                         <div class="align">
                             <input type="submit" value="Send Message" class="button bg-neutral-700" />
                     </form>
-                    <!-- <form id="form" action="" class="">
-                                <input onclick="store()" name="email" id="email" type="email" placeholder="Subscribe to our email list" required>
-                                <input id="submit" type="submit" value="Subscribe" class="btn">
-                            </form> -->
                 </div>
             </section>
         </main>
